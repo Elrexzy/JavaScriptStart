@@ -1,5 +1,23 @@
-const userInput = require("prompt-sync")();
+const prompt = require("prompt-sync")();
+while (true){
 
-let name = userInput("what is your name?: ");
-process.stdout.write(`My name is ${name}`);
+let number = Number(prompt("Enter a number : "));
 
+if(Number.isNaN(number)){
+    console.log("Enter a valid number: ");
+    continue;
+}
+else{
+
+let index = 1;
+while (index <= 12){
+    let multiplication = number * index;
+    console.log(number + "x" + index + "=" + multiplication);
+        index++;
+    }
+}
+break;
+}
+
+
+        
